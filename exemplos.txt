@@ -1,0 +1,43 @@
+Exemplos de entradas a serem utilizados:
+
+	automato.addEstados("w1,w2,w3,q4");
+	automato.setEstadoInicial("w1");
+	automato.addEstadosFinais("q4");
+	automato.addSimbolos("0,1,*");
+
+	automato.addTransicao("w1","w1","0");
+	automato.addTransicao("w1","w1","1");
+	automato.addTransicao("w1","w2","1");
+	automato.addTransicao("w2","w3","0");
+	automato.addTransicao("w2","w3","*");
+	automato.addTransicao("w3","q4","1");
+	automato.addTransicao("q4","q4","0");
+	automato.addTransicao("q4","q4","1");
+
+=========================================
+
+	automato.addEstados("w1,w2,w3");
+	automato.setEstadoInicial("w1");
+	automato.addEstadosFinais("w3");
+	automato.addSimbolos("0,1,*");
+
+	automato.addTransicao("w1","w1","0");
+	automato.addTransicao("w1","w2","*");
+	automato.addTransicao("w2","w3","0");
+	automato.addTransicao("w3","w2","1");
+
+=========================================
+
+	automato.addEstados("w1,w2,w3");
+	automato.setEstadoInicial("w1");
+	automato.addEstadosFinais("w2");
+	automato.addSimbolos("0,1,*");
+
+	automato.addTransicao("w1","w2","1");
+	automato.addTransicao("w2","w1","*");
+	automato.addTransicao("w2","w1","0");
+	automato.addTransicao("w2","w2","1");
+	automato.addTransicao("w2","w3","0");
+	automato.addTransicao("w2","w3","1");
+	automato.addTransicao("w3","w3","0");
+	automato.addTransicao("w3","w2","1");
